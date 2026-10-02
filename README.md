@@ -69,7 +69,9 @@ Ghost ले **16 Windows सुदृढीकरण प्रकार्य�
 ### सुरक्षा मूल्याङ्कन
 ```powershell
 # Ghost मोड्युल लोड गर्नुहोस्
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # हालको सुरक्षा स्थिति जाँच गर्नुहोस्
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### विकल्प 1: प्रत्यक्ष डाउनलोड (परीक्षण)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### विकल्प 2: मोड्युल स्थापना
